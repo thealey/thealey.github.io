@@ -1,0 +1,243 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>carolyn healey</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+
+    <div class="step slide" data-x="1000" data-y="-1500" data-scale='2'>
+      <q><center>
+          It's Carolyn Healey's <h1>half birthday celebration!!!!</h1>
+      </center></q>
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="3">
+      <p>She started off <b>tiny</b> </p>
+      <img src='baby.jpg'>
+    </div>
+
+    <div id="1" class="step slide" data-x="1100" data-y="-3000" data-scale="2">
+      <img src='1.jpg' width='800'>
+    </div>
+
+    <div id="1_1" class="step slide" data-x="1100" data-y="-5000" data-scale="2">
+      <img src='1_1.jpg' width='800'>
+    </div>
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="3">
+        <p>Before you knew it she was <b class="positioning">riding</b> her <b class="scaling">bike</b></p>
+      <img src='bike.jpg'>
+    </div>
+
+    <div id="2" class="step slide" data-x="1100" data-y="-7000" data-scale="2">
+      <center>
+        <img src='2.jpg' width='400'>
+      </center>
+    </div>
+
+    <div id="2_1" class="step slide" data-x="1100" data-y="-9000" data-scale="2">
+      <center>
+        <img src='2_2.jpg' width='400'>
+      </center>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="3">
+      <p>When she was 2 she started drawing...</p>
+      <img src='writing.jpg'>
+    </div>
+
+    <div id="3" class="step slide" data-x="1100" data-y="-11000" data-scale="2">
+      <center>
+        <img src='3.jpg' width='800'>
+      </center>
+    </div>
+
+    <div id="3_1" class="step slide" data-x="1100" data-y="-13000" data-scale="2">
+      <center>
+        <img src='3_1.jpg' width='450'>
+      </center>
+    </div>
+
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+      <p>At 3 she learned how to drive...
+        <img src='driving.jpg'>
+      </p>
+    </div>
+
+
+    <div id="4" class="step slide" data-x="1100" data-y="-15000" data-scale="2">
+      <center>
+        <img src='4.jpg' width='800'>
+      </center>
+    </div>
+
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="4">
+      <p>At 4 she got a dog named Chloe.
+        <img src='clo.jpg'>
+      </p>
+    </div>
+
+    <div id="5" class="step slide" data-x="1100" data-y="-17000" data-scale="2">
+      <center>
+        <img src='5.jpg' width='800'>
+      </center>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="1">
+      <p>At 5 Carolyn got her first job, on an apple farm.</p>
+        <img src='apples.jpg'>
+    </div>
+
+    <div id="5_1" class="step slide" data-x="1100" data-y="-19000" data-scale="2">
+      <center>
+        <img src='5_1.jpg' width='400'>
+      </center>
+    </div>
+
+    <div id="source" class="step" data-x="6700" data-y="2000" data-rotate="20" data-scale="1">
+      What happens at 6?
+      <p>
+        <strong>
+          Stay tuned!
+        </strong>
+      </p>
+    </div>
+
+    <div id="overview" class="step" data-x="0" data-y="-5000" data-scale=25">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) it's element get's the class of "active" and `#impress` root
+    element get's the class based on active step id `step-ID` (where ID is the step id)... It probably is not
+    so clear because of all these IDs in here, so for example when the first step (the one with id of `bored`)
+    is active, `#impress` element get a class of `step-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation.
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because I should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was to lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to API to control the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation
+        `api.goto( stepElement ) - moves the presentation to given step element (the DOM element of the step).
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+
